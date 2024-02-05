@@ -1,5 +1,6 @@
 import streamlit as st
 import cv2
+import numpy as np
 import face_recognition
 
 # Function to perform face recognition on the uploaded ID proof
@@ -35,7 +36,7 @@ def main():
     st.title("Face Recognition App")
 
     # Upload ID Proof
-    uploaded_file = st.file_uploader("Upload ID Proof", type=["jpg", "png"])
+    uploaded_file = st.file_uploader("Upload JPG ID Proof", type=["jpg"])
 
     if uploaded_file is not None:
         # Perform face recognition on the uploaded ID proof
